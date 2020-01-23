@@ -6,7 +6,6 @@ class Runner
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Start HelloWorldRunner");
         Console.SetIn(new AtheneStreamReader(Console.OpenStandardInput()));
         var program = Activator.CreateInstance(Type.GetType(args[0]));
         
@@ -16,7 +15,6 @@ class Runner
         {
             runprogram.Invoke(program, new object[] { new string [0] } );
         }
-        // Console.WriteLine("End HelloWorldRunner");
     }
 
     /// <summary>

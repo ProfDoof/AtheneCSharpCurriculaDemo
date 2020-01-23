@@ -1,7 +1,5 @@
 <?php
 
-include 'csharp_scoring.php';
-
 /** @test
  *  @score 0.1
  */
@@ -72,27 +70,5 @@ END
         );
 }
 
-// $files = ["Solutions/ProgramNoNamespace.cs"];
-// echo "Compile Test: ".compilation_test()."\n";
-// echo "Check Execution (1 and 2): ".check_1_and_2()."\n";
-// echo "Check Execution (2 and 3): ".check_2_and_3()."\n";
-// echo "Check Execution (10 and 13): ".check_10_and_13()."\n";
-// echo "Check Execution (126 and 847): ".check_126_and_847()."\n";
-// echo "\n";
-// $files = ["Solutions/Program.cs"];
-// echo "Compile Test: ".compilation_test()."\n";
-// echo "Check Execution (1 and 2): ".check_1_and_2()."\n";
-// echo "Check Execution (2 and 3): ".check_2_and_3()."\n";
-// echo "Check Execution (10 and 13): ".check_10_and_13()."\n";
-// echo "Check Execution (126 and 847): ".check_126_and_847()."\n";
-// echo "\n";
-
-// echo "Output Test (Add Two Integers): ".output_contains_lines($testOutput,<<<END
-// This program adds two numbers.
-// 1st number? <span class=input>1</span>
-// 2nd number? <span class=input>2</span>
-// The total is 3.
-// END
-// );
-// echo "\n";
+include 'csharp_scoring.php';
 ?>
