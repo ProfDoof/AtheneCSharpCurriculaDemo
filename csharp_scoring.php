@@ -18,7 +18,7 @@ function get_csharp_class_name($filename) {
         return $matches[1];
 }
 
-function get_type($filename) {
+function get_csharp_type($filename) {
     // Use get_namespace and get_class_name to generate the type
     // for use by the Runner csharp object.
     $type_name = "";
@@ -31,6 +31,7 @@ function get_type($filename) {
     return $type_name;
 }
 
+// TODO: Go through and document on all of the below code as most of the behavior is not clearly understandable.
 function compile($cmd) {
     echo $cmd."\n";
     execute(20, "$cmd", "", $stdout, $stderr);
@@ -70,7 +71,7 @@ function execution_test($file,&$output, $input='') {
     if (!compile("mcs $csflags -main:Runner Runner.cs $file -out:test_program.exe"))
         return false;
 
-    $type_name = get_type($file);
+    $type_name = get_csharp_type($file);
     $output = "";
     execute(20,"mono test_program.exe $type_name",$input,$output,$stderr);
 
